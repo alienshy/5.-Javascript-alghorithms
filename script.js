@@ -50,23 +50,45 @@
 
 
 //////3. Funksiya yazacaqsiniz və parametr olaraq array və number qəbul edəcək. Həmin number-in array-də olub-olmadığını yoxlayacaqsınız.
-function Myfunction(array, number) {
-    let yoxlama = false;
+// function Myfunction(array, number) {
+//     let yoxlama = false;
 
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === number) {
-            yoxlama = true;
-            break;
-        }
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] === number) {
+//             yoxlama = true;
+//             break;
+//         }
+//     }
+
+//     if (yoxlama) {
+//         console.log(`${number} arraydadir`);
+//     } else {
+//         console.log(`${number} arrayda deyil`);
+//     }
+// }
+// const arrayim = [0,0,0,0,0,0,0,1];
+// console.log(arrayim);
+// const numberim = 0;
+// Myfunction(arrayim, numberim);
+
+
+
+
+
+//////////findle
+
+    function Myfunction(array, number) {
+        return array.find(element => element === number);
     }
+    const array2 = [0,0,0,0,0,0,0,1];
+    const number2 = 6;
+
+    const yoxlama = Myfunction(array2, number2);
 
     if (yoxlama) {
-        console.log(`${number} arraydadir`);
+        console.log(array2);
+        console.log(`${number2} arraydadir`);
     } else {
-        console.log(`${number} arrayda deyil`);
+        console.log(array2);
+        console.log(`${number2} arrayda deyil`);
     }
-}
-const arrayim = [0,0,0,0,0,0,0,1];
-console.log(arrayim);
-const numberim = 0;
-Myfunction(arrayim, numberim);
